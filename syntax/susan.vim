@@ -1,6 +1,6 @@
 " Vim syntax file
 " Language: Susan (Template language for Modelica)
-" Maintainer: Rickard Lindberg <ricli85@gmail.com>
+" Maintainer: Rickard Lindberg
 " Latest Revision: 19 October 2009
 
 if exists("b:current_syntax")
