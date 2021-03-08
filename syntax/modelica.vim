@@ -21,27 +21,27 @@ syn keyword modelicaEndDefinition   end
 
 syn keyword modelicaLogicOp         not and or
 syn keyword modelicaType            Real Boolean enumeration tuple Option
-syn match modelicaType              " String\([^(]\)\@="
-syn match modelicaType              " Integer\([^(]\)\@="
-syn match modelicaType              " Clock\([^(]\)\@="
-syn match modelicaType              " list\(<\)\@="
-syn match modelicaType              " array\(<\)\@="
-syn match modelicaType              " Mutable\(<\)\@="
-syn match modelicaType              " Pointer\(<\)\@="
+syn match modelicaType              "\<String\>\s*\([^(]\)\@="
+syn match modelicaType              "\<Integer\>\s*\([^(]\)\@="
+syn match modelicaType              "\<Clock\>\s*\([^(]\)\@="
+syn match modelicaType              "\<list\>\s*\(<\)\@="
+syn match modelicaMetaType          "\<array\>\s*\(<\)\@="
+syn match modelicaMetaType          "\<Mutable\>\s*\(<\)\@="
+syn match modelicaMetaType          "\<Pointer\>\s*\(<\)\@="
 syn keyword modelicaIntrinsicOp     abs sign sqrt div mod rem ceil floor integer
 syn keyword modelicaIntrinsicOp     sin cos tan asin acos atan atan2 sinh cosh tanh exp log log10
 syn keyword modelicaIntrinsicOp     der delay cardinality semiLinear assert terminate
-syn match modelicaIntrinsicOp       "String\((\)\@="
-syn match modelicaIntrinsicOp       "Integer\((\)\@="
-syn match modelicaIntrinsicOp       "Clock\((\)\@="
+syn match modelicaIntrinsicOp       "\<String\>\s*\((\)\@="
+syn match modelicaIntrinsicOp       "\<Integer\>\s*\((\)\@="
+syn match modelicaIntrinsicOp       "\<Clock\>\s*\((\)\@="
 syn keyword modelicaArrayOp         ndims size scalar vector matrix identity diagonal 
 syn keyword modelicaArrayOp         zeros ones fill linspace min max sum product
 syn keyword modelicaArrayOp         transpose outerProduct symmetric cross skew cat
 syn keyword modelicaEventOp         initial terminal noEvent smooth sample pre edge change reinit
-syn match modelicaMetaBuiltin       "list\((\)\@="
-syn match modelicaMetaBuiltin       "array\((\)\@="
-syn match modelicaMetaBuiltin       "Mutable\(\.\)\@="
-syn match modelicaMetaBuiltin       "Pointer\(\.\)\@="
+syn match modelicaMetaBuiltin       "\<list\>\s*\((\)\@="
+syn match modelicaMetaBuiltin       "\<array\>\s*\((\)\@="
+syn match modelicaMetaBuiltin       "\<Mutable\>\s*\((\)\@="
+syn match modelicaMetaBuiltin       "\<Pointer\>\s*\((\)\@="
 syn keyword modelicaMetaBuiltin     listReverse threaded
 
 syn keyword modelicaStatement       break return
@@ -91,6 +91,7 @@ hi def link modelicaModPrefix       Keyword
 hi def link modelicaEndDefinition   Keyword
 
 hi def link modelicaType            Type
+hi def link modelicaMetaType        Type
 hi def link modelicaLogicOp         Keyword
 hi def link modelicaIntrinsicOp     Keyword
 hi def link modelicaArrayOp         Keyword
