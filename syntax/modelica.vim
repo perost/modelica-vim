@@ -21,13 +21,13 @@ syn keyword modelicaEndDefinition   end
 
 syn keyword modelicaLogicOp         not and or
 syn keyword modelicaType            Real Boolean enumeration tuple Option
-syn match modelicaType              "String\([^(]\)\@="
-syn match modelicaType              "Integer\([^(]\)\@="
-syn match modelicaType              "Clock\([^(]\)\@="
-syn match modelicaType              "list\(<\)\@="
-syn match modelicaType              "array\(<\)\@="
-syn match modelicaType              "Mutable\(<\)\@="
-syn match modelicaType              "Pointer\(<\)\@="
+syn match modelicaType              " String\([^(]\)\@="
+syn match modelicaType              " Integer\([^(]\)\@="
+syn match modelicaType              " Clock\([^(]\)\@="
+syn match modelicaType              " list\(<\)\@="
+syn match modelicaType              " array\(<\)\@="
+syn match modelicaType              " Mutable\(<\)\@="
+syn match modelicaType              " Pointer\(<\)\@="
 syn keyword modelicaIntrinsicOp     abs sign sqrt div mod rem ceil floor integer
 syn keyword modelicaIntrinsicOp     sin cos tan asin acos atan atan2 sinh cosh tanh exp log log10
 syn keyword modelicaIntrinsicOp     der delay cardinality semiLinear assert terminate
