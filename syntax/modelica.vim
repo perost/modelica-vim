@@ -79,6 +79,7 @@ syn region modelicaString start=+"+ excludenl end=+"+ contains=modelicaSpecialCh
 syn region modelicaAnnotation start=+\sannotation\s*(+ excludenl end=+)\s*;+ fold
 
 syn keyword TODOs                   TODO FIXME
+syn match printCall                 "\([^\.]\|^\)\@<=\<print\>\s*\((\)\@="
 
 hi def link modelicaStored          Keyword
 hi def link modelicaImport          PreProc
@@ -121,6 +122,7 @@ hi def link modelicaString          String
 
 hi def link modelicaAnnotation      Comment
 hi def link TODOs                   Todo
+hi def link printCall               Error
 
 syn sync match modelicaEnv groupthere NONE "^\s*end"
 
