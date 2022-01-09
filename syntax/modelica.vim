@@ -38,6 +38,7 @@ syn keyword modelicaArrayOp         ndims size scalar vector matrix identity dia
 syn keyword modelicaArrayOp         zeros ones fill linspace min max sum product
 syn keyword modelicaArrayOp         transpose outerProduct symmetric cross skew cat
 syn keyword modelicaEventOp         initial terminal noEvent smooth sample pre edge change reinit
+syn keyword modelicaClockOp         previous sample hold subSample superSample shiftSample backSample noClock firstTick interval
 syn match modelicaMetaBuiltin       "\<list\>\s*\((\)\@="
 syn match modelicaMetaBuiltin       "\<array\>\s*\((\)\@="
 syn match modelicaMetaBuiltin       "\<Mutable\>\s*\((\)\@="
@@ -97,6 +98,7 @@ hi def link modelicaLogicOp         Keyword
 hi def link modelicaIntrinsicOp     Keyword
 hi def link modelicaArrayOp         Keyword
 hi def link modelicaEventOp         Keyword
+hi def link modelicaClockOp         Keyword
 hi def link modelicaMetaBuiltin     Keyword
 
 hi def link modelicaStatement       Statement
