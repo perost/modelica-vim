@@ -17,6 +17,7 @@ syn keyword modelicaClassSpecifier  constrainedby redeclare inner outer subtypeo
 syn keyword modelicaClassVisibility public protected
 syn keyword modelicaTypePrefix      type flow stream discrete parameter constant input output
 syn keyword modelicaModPrefix       final each
+syn keyword modelicaFunctionPrefix  pure impure
 syn keyword modelicaEndDefinition   end
 
 syn keyword modelicaLogicOp         not and or
@@ -90,6 +91,7 @@ hi def link modelicaClassSpecifier  Keyword
 hi def link modelicaClassVisibility Keyword
 hi def link modelicaTypePrefix      Keyword
 hi def link modelicaModPrefix       Keyword
+hi def link modelicaFunctionPrefix  Keyword
 hi def link modelicaEndDefinition   Keyword
 
 hi def link modelicaType            Type
