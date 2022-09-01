@@ -10,9 +10,9 @@ endif
 syn keyword modelicaStored          within
 syn keyword modelicaImport          import
 
-syn keyword modelicaClassDefinition class model record block connector type 
-syn keyword modelicaClassDefinition package function uniontype 
-syn keyword modelicaClassSpecifier  encapsulated partial expandable extends replaceable 
+syn keyword modelicaClassDefinition class model record block connector type
+syn keyword modelicaClassDefinition package function uniontype
+syn keyword modelicaClassSpecifier  encapsulated partial expandable extends replaceable
 syn keyword modelicaClassSpecifier  constrainedby redeclare inner outer subtypeof
 syn keyword modelicaClassVisibility public protected
 syn keyword modelicaTypePrefix      type flow stream discrete parameter constant input output
@@ -35,7 +35,7 @@ syn keyword modelicaIntrinsicOp     der delay cardinality semiLinear assert term
 syn match modelicaIntrinsicOp       "\<String\>\s*\((\)\@="
 syn match modelicaIntrinsicOp       "\<Integer\>\s*\((\)\@="
 syn match modelicaIntrinsicOp       "\<Clock\>\s*\((\)\@="
-syn keyword modelicaArrayOp         ndims size scalar vector matrix identity diagonal 
+syn keyword modelicaArrayOp         ndims size scalar vector matrix identity diagonal
 syn keyword modelicaArrayOp         zeros ones fill linspace min max sum product
 syn keyword modelicaArrayOp         transpose outerProduct symmetric cross skew cat
 syn keyword modelicaEventOp         initial terminal noEvent smooth sample pre edge change reinit
@@ -78,7 +78,8 @@ syn match modelicaMultiComment      "\/\*\_.\{-}\*\/" contains=modelicaNumbersCo
 syn match modelicaSpecialCharacter  +\\[\'\"?\\abfnrtv]+
 syn region modelicaString start=+"+ excludenl end=+"+ contains=modelicaSpecialCharacter
 
-syn region modelicaAnnotation start=+\sannotation\s*(+ excludenl end=+)\s*;+ fold
+syn region modelicaAnnotation start=+\<annotation\s*(+ excludenl end=+)\s*;+ fold
+syn region modelicaAnnotationInclude start=+\<Include\s*=\s*"+ excludenl end=+"+ contains=modelicaSpecialCharacter containedin=modelicaAnnotation contained
 
 syn keyword TODOs                   TODO FIXME
 syn match printCall                 "\([^\.]\|^\)\@<=\<print\>\s*\((\)\@="
@@ -125,6 +126,7 @@ hi def link modelicaMultiComment    Comment
 hi def link modelicaString          String
 
 hi def link modelicaAnnotation      Comment
+hi def link modelicaAnnotationInclude Comment
 hi def link TODOs                   Todo
 hi def link printCall               Error
 
