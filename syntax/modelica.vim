@@ -54,6 +54,7 @@ syn keyword modelicaWhen            when elsewhen
 syn keyword modelicaConnect         connect
 syn keyword modelicaMatch           matchcontinue match case as guard try
 syn keyword modelicaSection         algorithm equation local
+syn keyword modelicaExternal        external
 syn keyword modelicaEquality        equality failure
 
 syn keyword modelicaTime            time
@@ -112,6 +113,7 @@ hi def link modelicaWhen            Keyword
 hi def link modelicaConnect         Keyword
 hi def link modelicaMatch           Keyword
 hi def link modelicaSection         Keyword
+hi def link modelicaExternal        Keyword
 hi def link modelicaEquality        Keyword
 
 hi def link modelicaTime            Keyword
