@@ -79,11 +79,11 @@ syn match modelicaMultiComment      "\/\*\_.\{-}\*\/" contains=modelicaNumbersCo
 syn match modelicaSpecialCharacter  +\\[\'\"?\\abfnrtv]+
 syn region modelicaString start=+"+ excludenl end=+"+ contains=modelicaSpecialCharacter
 
-syn region modelicaAnnotation start=+\<annotation\s*(+ excludenl end=+)\s*;+ fold
+syn region modelicaAnnotation start=+\<\Cannotation\s*(+ excludenl end=+)\s*;+ fold
 syn region modelicaAnnotationInclude start=+\<Include\s*=\s*"+ excludenl end=+"+ contains=modelicaSpecialCharacter containedin=modelicaAnnotation contained
 
 syn keyword TODOs                   TODO FIXME
-syn match printCall                 "\([^\.]\|^\)\@<=\<print\>\s*\((\)\@="
+syn match printCall                 "\([^\.]\|^\)\@<=\<\Cprint\>\s*\((\)\@="
 
 hi def link modelicaStored          Keyword
 hi def link modelicaImport          PreProc
